@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -7,6 +7,7 @@ const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Education = lazy(() => import('./pages/Education'));
 const Publication = lazy(() => import('./pages/Publication'));
+
 const App = () => {
   return (
     <main className='bg-slate-300/20 min-h-screen'>
