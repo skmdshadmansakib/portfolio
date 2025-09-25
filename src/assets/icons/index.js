@@ -44,6 +44,13 @@ import binary from "./binary.png";
 import idea from "./idea.png";
 import technical from "./technical.png";
 import linux from "./linux.svg";
+import technofrenzy from "./technofrenzy certificate.jpg";
+import plc from "./plc certificate.jpg";
+import Web from "./Web development ceftificate.jpg";
+import flutter from './flutter.png';
+import Docker from './Docker.png';
+import C from './C.png';
+import kotlin from './kotlin.svg';
 
 export {
     css,
@@ -91,5 +98,12 @@ export {
     binary,
     idea,
     technical,
-    linux
+    linux,
+    technofrenzy,
+    plc,
+    Web,
+    flutter,
+    Docker,
+    C,
+    kotlin
 }

@@ -27,5 +27,5 @@ export {
     NESCO,
     BCSIR,
     engineers,
-    mtwebsolution
+    mtwebsolution,
 }

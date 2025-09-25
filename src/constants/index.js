@@ -22,7 +22,14 @@ import {
     facebook,
     Jira,
     rsis,
-    linux
+    linux,
+    technofrenzy,
+    plc,
+    Web,
+    flutter,
+    Docker,
+    C,
+    kotlin
 } from "../assets/icons";
 
 export const skills = [
@@ -91,6 +98,26 @@ export const skills = [
         name: "linux",
         type: "Programming",
     },
+    {
+        imageUrl: flutter,
+        name: "Flutter",
+        type: "Programming",
+    },
+    {
+        imageUrl: Docker,
+        name: "docker",
+        type: "Programming",
+    },
+    {
+        imageUrl: C,
+        name: "c",
+        type: "Programming",
+    },   
+    {
+        imageUrl: kotlin,
+        name: "Kotlin",
+        type: "Programming",
+    },   
 ];
 
 export const experiences = [
@@ -258,4 +285,23 @@ export const published  = [
         icon: rsis,
         link: "https://doi.org/10.51583/IJLTEMAS.2025.14020013"
     },
+];
+technofrenzy
+
+export const certificates = [
+  {
+    title: "Technofrenzy (Event Management) ",
+    organization: "Varendra University",
+    imageUrl: technofrenzy,
+  },
+  {
+    title: "Programmable Logic Controller ",
+    organization: "Varendra University",
+    imageUrl: plc,
+  },
+  {
+    title: "Web Designing ",
+    organization: "BRAC ISD",
+    imageUrl: Web,
+  },
 ];

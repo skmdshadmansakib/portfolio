@@ -4,6 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ */
+  user-select: none;         /* Standard */
+}
+
+/* Prevent image dragging */
+img {
+  user-drag: none;            /* Chrome/Safari */
+  -webkit-user-drag: none;    /* Safari */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 :root {
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
@@ -180,4 +197,141 @@ body:has(.card[data-color="green"]:hover) {
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+
+/* ✅ Global safety */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Force containers to shrink on small screens */
+@media (max-width: 480px) {
+  .max-container {
+    @apply px-4 !pt-20 pb-8; /* reduce padding */
+  }
+
+  .header {
+    @apply px-4;
+    position: fixed; /* keep inside screen */
+    max-width: 100%;
+  }
+
+  .footer {
+    @apply px-4;
+    max-width: 100%;
+  }
+
+  .info-box {
+    @apply mx-2 px-4;
+    max-width: 100% !important;
+  }
+
+  .cta-text {
+    @apply text-xl text-center leading-snug;
+    word-break: break-word;
+  }
+
+  .block-container {
+    max-width: 100% !important;
+    overflow: hidden; /* clip the 3D shadow effect */
+  }
+}
+/* ====================== Global Reset ====================== */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* ====================== Container ====================== */
+.max-container {
+  max-width: 5xl;
+  margin: 0 auto;
+  padding: 16px 2rem 3rem;
+}
+
+/* ====================== Headings ====================== */
+.head-text {
+  font-size: 3rem; /* default desktop */
+  line-height: 1.2;
+}
+
+.subhead-text {
+  font-size: 1.75rem;
+}
+
+/* ====================== Buttons ====================== */
+.btn {
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+}
+
+/* ====================== CTA ====================== */
+.cta-text {
+  font-size: 2rem;
+}
+
+/* ====================== Info Box ====================== */
+/* Default desktop behavior */
+.info-box {
+  @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+}
+
+/* Small screen adjustment */
+@media (max-width: 480px) {
+  .info-box {
+    @apply mx-2 px-4 max-w-full; /* full width on mobile */
+  }
+}
+
+/* ====================== Block Container ====================== */
+.block-container {
+  max-width: 100%;
+  perspective: 500px;
+}
+
+/* ====================== Responsive Scaling ====================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .head-text { font-size: 2.5rem; }
+  .subhead-text { font-size: 1.5rem; }
+  .btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
+  .cta-text { font-size: 1.75rem; }
+  .info-box { padding: 0.75rem 1.5rem; max-width: 28rem; }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .head-text { font-size: 2rem; }
+  .subhead-text { font-size: 1.25rem; }
+  .btn { font-size: 0.85rem; padding: 0.5rem 0.875rem; }
+  .cta-text { font-size: 1.5rem; }
+  .info-box { padding: 0.5rem 1rem; max-width: 24rem; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .head-text { font-size: 1.5rem; }
+  .subhead-text { font-size: 1rem; }
+  .btn { font-size: 0.75rem; padding: 0.4rem 0.75rem; }
+  .cta-text { font-size: 1.25rem; }
+  .info-box { padding: 0.5rem 0.75rem; max-width: 100%; margin: 0.5rem auto; }
+  .header, .footer { padding-left: 1rem; padding-right: 1rem; }
+  .block-container { overflow: hidden; }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .head-text { font-size: 1.25rem; }
+  .subhead-text { font-size: 0.875rem; }
+  .btn { font-size: 0.7rem; padding: 0.35rem 0.6rem; }
+  .cta-text { font-size: 1rem; }
+  .info-box { padding: 0.4rem 0.5rem; max-width: 100%; }
 }
